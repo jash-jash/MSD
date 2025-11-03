@@ -1,37 +1,24 @@
 {
-  "name": "my-react-app",
+  "name": "hyperattend-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --port 5173"
   },
   "dependencies": {
-    "chart.js": "^4.5.0",
-    "framer-motion": "^12.23.24",
-    "html5-qrcode": "^2.3.8",
-    "jspdf": "^3.0.3",
-    "jspdf-autotable": "^5.0.2",
-    "qrcode": "^1.5.4",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-qr-barcode-scanner": "^2.1.17"
+    "chart.js": "^4.4.1",
+    "framer-motion": "^11.0.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.30.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.36.0",
-    "@types/react": "^19.1.16",
-    "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.4",
-    "eslint": "^9.36.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.22",
-    "globals": "^16.4.0",
-    "vite": "npm:rolldown-vite@7.1.14"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@7.1.14"
+    "@vitejs/plugin-react": "^4.3.2",
+    "vite": "^5.4.0"
   }
 }

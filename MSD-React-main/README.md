@@ -1,16 +1,29 @@
-# React + Vite
+# HyperAttend – Modular React Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modularized React (Vite) frontend for **HyperAttend**, wired to your deployed backend.
 
-Currently, two official plugins are available:
+## Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+cd hyperattend-frontend-modular
+cp .env.sample .env   # set VITE_API_URL to your backend base URL
+npm i
+npm run dev
+```
 
-## React Compiler
+## Build for Production
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run build
+npm run preview
+```
 
-## Expanding the ESLint configuration
+## Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/components/*` – Reusable UI components (Glass, Sidebar, StatCard, StudentList)
+- `src/pages/*` – Pages (Login, Student, Teacher, Calendar, Analytics, Notifications, Settings)
+- `src/utils/*` – `api.js` (fetch helper), `storage.js` (localStorage)
+- `src/App.jsx` – App wiring + routes + global styles
+- `.env.sample` – Set `VITE_API_URL` to your backend
+
+Enjoy!
