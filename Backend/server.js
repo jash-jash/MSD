@@ -1,4 +1,4 @@
-// =====// ===================== IMPORTS =====================
+// ===================== IMPORTS =====================
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -7,11 +7,13 @@ const dotenv = require("dotenv");
 dotenv.config();
 const app = express();
 
+// ✅ Correct universal CORS setup (for localhost + Vercel)
 app.use(
   cors({
-    origin: "*",
+    origin: ["http://localhost:5173", "https://msd-ashy.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   })
 );
 
